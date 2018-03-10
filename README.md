@@ -206,16 +206,17 @@ Run the script
 (env) py@raspberrypi:~/AIY-voice-kit-python $ src/ir_remote_assistant_library.py
 ```
 
-In addition to using Google Voice AIY kit as your voice-controlled TV remote, the script also allows you to fully utilize Google Assistant API (asking questions about weather, time, traffic, etc.) Every time you say "Hey Google" or "OK Google", the script listens to your voice request which follows and then sends this request to Google Assistant API which returns back a text string (what you said) which can be used to control your TV or other applicances and/or a voice message from Assistant with information your requested. This device can be used in two modes:
+In addition to using Google Voice AIY kit as your voice-controlled TV remote, the script also allows you to fully utilize Google Assistant API (asking questions about weather, time, traffic, etc.) Every time you say "Hey Google" or "OK Google", the script listens to your voice request which follows and then sends this request to Google Assistant API which returns back a text string (your request) which can be used to control your TV or other applicances and a voice message from Assistant with information your requested. This device can be used in two modes:
 
 - **Assistant + Remote Control Mode**. If you say **"Hey Google, I need your help"** then you should hear a response "I am listening" and Google Asistant will turn into "Assistant mode" responding to your requests (don't forget to say "Hey Google" before each request) with voice messages. It will also continue working as your TV remote sending IR signals based on your voice commands.
 
-- **Remote Control Only Mode**. If you only want use this device as a TV remote then say **"Hey Google, get some rest"**. You will hear a confirmation "Let me know when you need my help" and Google Assistant will not be engaged into conversation (i.e. ignore your questions about the weather, etc.) and only serve as a remote control. You can activate "Assistant + Remote Control Mode" at any moment by saying "Hey Google, I need your help"  
+- **Remote Control Only Mode**. If you only want use this device as a TV remote then say **"Hey Google, get some rest"**. You will hear a confirmation "Let me know when you need my help" and Google Assistant will stop engaging into conversation (i.e. ignore your questions about weather, etc.) and only serve as a remote control. You can always activate "Assistant + Remote Control Mode" again by saying "Hey Google, I need your help".  
 
 Common errors:
 
 - Make sure that bright LED inside the arcade button mounted on top of the device is ON before you proceed with a voice command. This means the device is listening.
-- Point infrared LED toward your TV and make sure it is located not too far so the signal is strong enough. If remote commands are not working, make sure your IR LED sends a signal (with your cellphone camera.) 
+- Point infrared LED toward your TV and make sure it is located not too far so the signal is strong enough. If remote commands are not working, make sure your IR LED sends a signal (with your cellphone camera.)
+- Make sure the room is not too noisy and move closer to the device if it is.
 
 
 
