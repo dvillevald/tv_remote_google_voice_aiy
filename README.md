@@ -194,11 +194,11 @@ The Python script [ir_remote_assistant_library.py](https://github.com/dvillevald
 
 Copy `ir_remote_assistant_library.py` into the folder `/AIY-voice-kit-python/src`.
 
-Open the script '/AIY-voice-kit-python/src/ir_remote_assistant_library.py' with the text editor or IDE. Open your lirc config file '/etc/lirc/lircd.conf' with text editor. Make sure that (1) the values of `voice_command_to_key` discionary in the Python script (KEY_POWER, etc.) match the ones from config file and (2) the value of `remote_name` variable (I used '/home/pi/lircd.conf') in the Python script matches the configuration name (you can find it in line which starts with "name") of your lirc config file.   
+Open the script `/AIY-voice-kit-python/src/ir_remote_assistant_library.py` with the text editor or IDE. Open your lirc config file `/etc/lirc/lircd.conf` with text editor. Make sure that (1) the values of `voice_command_to_key` discionary in the Python script (KEY_POWER, etc.) match the ones from config file and (2) the value of `remote_name` variable (I used '/home/pi/lircd.conf') in the Python script matches the configuration name (you can find it in line which starts with "name") of your lirc config file.   
 
 open development terminal:
 
-<img src="https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/Start_dev_terminal.png" width="425" height="425"/>
+<img src="https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/Start_dev_terminal.png" width="425"/>
 
 and type type the command
 
