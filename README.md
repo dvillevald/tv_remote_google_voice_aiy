@@ -19,7 +19,9 @@ Replace old TV/Roku remotes with voice-controlled Google Voice AIY kit using Goo
 
 ## Project steps
 
-### Solder wires to GPIO pins 24, 26, GND and 5V
+### Solder wires of 4-pin JST-XH Connector to GPIO pins 24, 26, GND and 5V of Voice HAT (marked by red rectangular below):
+
+![Attaching wires of JST Connector to Voice Hat]
 
 
 
