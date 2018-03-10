@@ -146,7 +146,7 @@ space 2903
 
 ### 6. Create LIRC remote configuration file. 
 
-You’re going to need to either find an existing LIRC config file for your remote control or use your IR receiver to generate a new LIRC config file (find existing remote profiles [here](http://lirc.sourceforge.net/remotes/)). In my case, I created a new LIRC config file. To do this, read the documentation on the [irrecord](http://www.lirc.org/html/irrecord.html) application that comes with LIRC. When using `irrecord` it will ask you to name the buttons you’re programming as you program them. It helps to run `irrecord --list-namespace` before you begin to see the valid names. You can use one, two or more remote control (I used two - one for TV and another for Roku player) with `irrecord`.
+You’re going to need to either find an existing LIRC config file for your remote control or use your IR receiver to generate a new LIRC config file (find existing remote profiles [here](http://lirc.sourceforge.net/remotes/)). In my case, I created a new LIRC config file. To do this, read the documentation on the [irrecord](http://www.lirc.org/html/irrecord.html) application that comes with LIRC. When using `irrecord` it will ask you to name the buttons you’re programming as you program them. It helps to run `irrecord --list-namespace` before you begin to see the valid names. You can use one, two or more remote control (I used two - one for TV and another for Roku player) with `irrecord`. I suggest to select the button names which make it easy to understand what actions they relate to (KEY_POWER for turning on/off the TV, etc.) 
 
 Here were the commands that I ran to generate a remote configuration file:
 
@@ -194,7 +194,7 @@ The Python script [ir_remote_assistant_library.py](https://github.com/dvillevald
 
 Copy `ir_remote_assistant_library.py` into the folder `/AIY-voice-kit-python/src`.
 
-Open the file with text editor and replace my 
+Open the script '/AIY-voice-kit-python/src/ir_remote_assistant_library.py' with the text editor or IDE. Open your lirc config file '/etc/lirc/lircd.conf' with text editor. Make sure that (1) the values of `voice_command_to_key` discionary in the Python script (KEY_POWER, etc.) match the ones from config file and (2) the value of `remote_name` variable (I used '/home/pi/lircd.conf') in the Python script matches the configuration name (you can find it in line which starts with "name") of your lirc config file.   
 
 open development terminal:
 
