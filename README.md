@@ -60,11 +60,26 @@ Make an opening in the wall of the carton box for IR LED and receiver and attach
 
 ### 5. Download and install LIRC software
 
-There are several very good tutorial on how to install LIRC on Raspberry PI. For example, the one from Austin Stanton (
+There are several very good tutorial on how to install LIRC on Raspberry PI. For example, you can follow the one from Austin Stanton (
 https://www.hackster.io/austin-stanton/creating-a-raspberry-pi-universal-remote-with-lirc-2fd581)
+
+Install LIRC
 
 ```
 sudo apt-get install lirc
+```
+
+Test
+
+```
+# List all of the commands that LIRC knows for 'Roku'
+irsend LIST Roku ""
+
+# Send the KEY_POWER command once
+irsend SEND_ONCE Roku KEY_POWER
+
+# Send the KEY_VOLUMEDOWN command once
+irsend SEND_ONCE Roku KEY_VOLUMEDOWN
 ```
 
 
