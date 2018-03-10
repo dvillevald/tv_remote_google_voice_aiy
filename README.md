@@ -14,7 +14,7 @@ Replace old TV/Roku remotes with voice-controlled Google Voice AIY kit using Goo
 - 4-pin JST-XH Connector Pair
 - 2-sided sticky foam tape
 
-![Hardware components](https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/Hardware_components.jpg)
+<img src="https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/Hardware_components.jpg" width="425"/>
 
 ## Project steps
 
@@ -22,9 +22,7 @@ Replace old TV/Roku remotes with voice-controlled Google Voice AIY kit using Goo
 
 Schematics of Voice Hat connections             | Soldered wires to Voice Hat
 :----------------------------------------------:|:------------------------------------------------------------:
-![](https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/Voice_HAT_Hardware_Extensions.png)                                          |  ![](https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/Soldering%20cables%20to%20HAT%20board%20.JPG)
-
-<img src="https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/Voice_HAT_Hardware_Extensions.png" width="425"/> 
+<img src="https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/Voice_HAT_Hardware_Extensions.png" width="425"/>    |  <img src="https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/Soldering%20cables%20to%20HAT%20board%20.JPG" width="425"/>
 
 
 ![Schematics of Voice Hat connections](https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/Voice_HAT_Hardware_Extensions.png)
