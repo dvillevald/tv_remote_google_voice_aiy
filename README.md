@@ -60,7 +60,7 @@ Make an opening in the wall of the carton box for IR LED and receiver and attach
 
 ### 5. Download and install LIRC software
 
-There are several very good tutorials on how to install LIRC on Raspberry PI. For example, you can follow the one from [Austin Stanton](https://www.hackster.io/austin-stanton/creating-a-raspberry-pi-universal-remote-with-lirc-2fd581) **Make sure you reference the right pins - unlike Austin's tutorial we use output pin 26 and input pin 24 here.** 
+There are several very good tutorials on how to install LIRC on Raspberry PI. For example, you can follow the one from [Austin Stanton](https://www.hackster.io/austin-stanton/creating-a-raspberry-pi-universal-remote-with-lirc-2fd581). **Make sure you reference the right pins - unlike Austin's tutorial we use output pin 26 and input pin 24 here.** 
 
 - Install LIRC
 
@@ -140,11 +140,37 @@ pulse 85
 space 2903
 ```
 
-- Testing the IR LED. You’re going to need to either find an existing LIRC config file for your remote control or use your IR receiver to generate a new LIRC config file (find existing remote profiles [here](http://lirc.sourceforge.net/remotes/)). In my case, I created a new LIRC config file. To do this, read the documentation on the **irrecord** application that comes with LIRC.
+- Testing the IR LED. You’re going to need to either find an existing LIRC config file for your remote control or use your IR receiver to generate a new LIRC config file (find existing remote profiles [here](http://lirc.sourceforge.net/remotes/)). In my case, I created a new LIRC config file. To do this, read the documentation on the [irrecord](http://www.lirc.org/html/irrecord.html). application that comes with LIRC. When using irrecord it will ask you to name the buttons you’re programming as you program them. Be sure to run irrecord --list-namespace to see the valid names before you begin. Here were the commands that I ran to generate a remote configuration file:
 
 ```
+# Stop lirc to free up /dev/lirc0
+$ sudo /etc/init.d/lirc stop
 
+# Create a new remote control configuration file (using /dev/lirc0) and save the output to ~/lircd.conf
+$ irrecord -d /dev/lirc0 ~/lircd.conf
+
+# Make a backup of the original lircd.conf file
+$ sudo mv /etc/lirc/lircd.conf /etc/lirc/lircd_original.conf
+
+# Copy over your new configuration file
+$ sudo cp ~/lircd.conf /etc/lirc/lircd.conf
+
+# Start up lirc again
+$ sudo /etc/init.d/lirc start
 ```
 
-[I'm an inline-style link]
+- Once you’ve completed a remote configuration file and saved/added it to */etc/lirc/lircd.conf* you can try testing the IR LED. We’ll be using the [irsend](http://www.lirc.org/html/irsend.html) application that comes with LIRC to facilitate sending commands. You’ll definitely want to check out the documentation to learn more about the options irsend has.
+
+Here are the commands I ran to test my IR LED (using the “/home/pi/lircd.conf” remote configuration file I created):
+
+```
+# List all of the commands that LIRC knows for 'Roku'
+$ irsend LIST /home/pi/lircd.conf ""
+
+# Send the KEY_POWER command once
+$ irsend SEND_ONCE /home/pi/lircd.conf KEY_POWER
+```
+You can test that it is was working by pointing the IR LED at your TV/Roku and testing whether you could turn it on (I am assuming you programmed KEY_POWER to turn on your TV). Another way is to use your cellphone camera to see if LED blinks when you send commands with *irsend*. It did not work with my iPhone but worked file with Android phone (Samsung Galaxy.) 
+
+
 
