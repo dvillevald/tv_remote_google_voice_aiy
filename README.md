@@ -55,6 +55,9 @@ Make an opening in the wall of the carton box for IR LED and receiver and attach
 
 <img src="https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/Hardware_to_assemble.jpg" width="425" height="425"/>    |   <img src="https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/Hardware_with_sticky_tape.JPG" width="425" height="425"/>
 
+<img src="https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/Fully_assembled_device2.JPG" width="425" height="425"/>    |   <img src="https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/Hardware_with_sticky_tape.JPG" width="425" height="425"/>
+
+
 
 
 
