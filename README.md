@@ -61,25 +61,48 @@ Make an opening in the wall of the carton box for IR LED and receiver and attach
 ### 5. Download and install LIRC software
 
 There are several very good tutorial on how to install LIRC on Raspberry PI. For example, you can follow the one from Austin Stanton (
-https://www.hackster.io/austin-stanton/creating-a-raspberry-pi-universal-remote-with-lirc-2fd581)
+https://www.hackster.io/austin-stanton/creating-a-raspberry-pi-universal-remote-with-lirc-2fd581) Note that we use **output pin 26** and **input pin 24 here.** 
 
-Install LIRC
+- Install LIRC
 
 ```
 sudo apt-get install lirc
 ```
 
-Test
+- Add to your /etc/modules file by entering the command below
 
 ```
-# List all of the commands that LIRC knows for 'Roku'
-irsend LIST Roku ""
+sudo cat >> /etc/modules <<EOF
+lirc_dev
+lirc_rpi gpio_in_pin=24 gpio_out_pin=26
+EOF
+```
 
-# Send the KEY_POWER command once
-irsend SEND_ONCE Roku KEY_POWER
+- Change your /etc/lirc/hardware.conf file by entering the command below
 
-# Send the KEY_VOLUMEDOWN command once
-irsend SEND_ONCE Roku KEY_VOLUMEDOWN
+```
+sudo cat > /etc/lirc/hardware.conf <<EOF 
+########################################################
+# /etc/lirc/hardware.conf
+#
+# Arguments which will be used when launching lircd
+LIRCD_ARGS="--uinput"
+# Don't start lircmd even if there seems to be a good config file
+# START_LIRCMD=false
+# Don't start irexec, even if a good config file seems to exist.
+# START_IREXEC=false
+# Try to load appropriate kernel modules
+LOAD_MODULES=true
+# Run "lircd --driver=help" for a list of supported drivers.
+DRIVER="default"
+# usually /dev/lirc0 is the correct setting for systems using udev
+DEVICE="/dev/lirc0"
+MODULES="lirc_rpi"
+# Default configuration files for your hardware if any
+LIRCD_CONF=""
+LIRCMD_CONF=""
+######################################################## 
+EOF
 ```
 
 
