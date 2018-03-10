@@ -49,7 +49,7 @@ Follow instructions at (https://aiyprojects.withgoogle.com/voice) and assemble G
 
 Make an opening in the wall of the carton box for IR LED and receiver and attached the IR circuit board to the wall with 2-sided sticky foam tape.
 
-<img src="https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/Hardware_to_assemble.jpg" width="425"/>    |   <img src="https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/Rear.JPG" width="425"/>
+<img src="https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/Hardware_to_assemble.jpg" width="425" height="425"/>    |   <img src="https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/Rear.JPG" width="425"/>
 
 
 
