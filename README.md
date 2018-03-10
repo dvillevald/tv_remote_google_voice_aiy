@@ -141,10 +141,11 @@ pulse 85
 space 2903
 ```
 
-- Testing the IR LED. You’re going to need to either find an existing LIRC config file for your remote control or use your IR receiver to generate a new LIRC config file (find existing remote profiles (http://lirc.sourceforge.net/remotes/)). In my case, I created a new LIRC config file. To do this, read the documentation on the **irrecord** application that comes with LIRC.
+- Testing the IR LED. You’re going to need to either find an existing LIRC config file for your remote control or use your IR receiver to generate a new LIRC config file (find existing remote profiles [here](http://lirc.sourceforge.net/remotes/)). In my case, I created a new LIRC config file. To do this, read the documentation on the **irrecord** application that comes with LIRC.
 
 ```
 
 ```
 
+[I'm an inline-style link]
 
