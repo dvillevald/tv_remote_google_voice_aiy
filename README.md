@@ -24,6 +24,9 @@ Schematics of Voice Hat connections             | Soldered wires to Voice Hat
 :----------------------------------------------:|:------------------------------------------------------------:
 ![](https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/Voice_HAT_Hardware_Extensions.png)                                          |  ![](https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/Soldering%20cables%20to%20HAT%20board%20.JPG)
 
+<img src="https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/Voice_HAT_Hardware_Extensions.png" width="425"/> 
+
+
 ![Schematics of Voice Hat connections](https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/Voice_HAT_Hardware_Extensions.png)
 
 ![Soldering wires to Voice Hat](https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/Soldering%20cables%20to%20HAT%20board%20.JPG)
