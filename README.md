@@ -3,6 +3,10 @@
 
 Replace old TV/Roku remotes with voice-controlled Google Voice AIY kit using Google Assistant Library
 
+## Software
+- LIRC package to detect and send infrared (IR) signals
+- Python script 
+
 ## Hardware
 - Google Voice AIY kit (http://www.microcenter.com/product/483414/AIY_Voice_Kit)
 - Raspberry PI 3 Model B
@@ -53,25 +57,5 @@ Make an opening in the wall of the carton box for IR LED and receiver and attach
 
 
 
-![Schematics of IR hardware extension](https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/RPI1_schem.jpg)
 
 
-### 3. Assemble Google Voice AIY kit
-
-Follow instructions at (https://aiyprojects.withgoogle.com/voice) and assemble Google Voice AIY kit. 
-
-
-### Assemble hardware
-
-Follow instructions at (https://aiyprojects.withgoogle.com/voice) and assemble Google Voice AIY kit. 
-
-
-
-
-## Software
-- LIRC package to detect and send infrared (IR) signals
-- Python script 
-
-## Assemble hardware
-
-Follow instructions at (https://aiyprojects.withgoogle.com/voice) and assemble Google Voice AIY kit. 
