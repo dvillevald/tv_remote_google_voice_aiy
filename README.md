@@ -66,7 +66,7 @@ Make an opening in the wall of the carton box for IR LED and receiver and attach
 
 There are several very good tutorials on how to install LIRC on Raspberry PI. Here I follow the one created by [Austin Stanton](https://www.hackster.io/austin-stanton/creating-a-raspberry-pi-universal-remote-with-lirc-2fd581). **If you are using Austin's tutorial, make sure you reference the right pins - unlike Austin's tutorial I use output pin 26 and input pin 24 here. Also, unlike Astin who used the name "Roku" in lircd.conf file for his remote configuration, I am using the name “/home/pi/lircd.conf”.** 
 
-Install LIRC
+Install LIRC on Raspberry PI of your device
 
 ```
 $ sudo apt-get install lirc
@@ -206,9 +206,7 @@ Run the script
 (env) py@raspberrypi:~/AIY-voice-kit-python $ src/ir_remote_assistant_library.py
 ```
 
-
-
-In addition to using Google Voice AIY kit as your voice-controlled TV remote, the script also allows you to fully utilize Google Assistant API (asking questions about weather, time, traffic, etc.) Every time you say "Hey Google" or "OK Google", the script sends a request to Google Assistant API which returns back a text string which can be used to control your TV or a voice message with information your requested.  The device can be used in two modes:
+In addition to using Google Voice AIY kit as your voice-controlled TV remote, the script also allows you to fully utilize Google Assistant API (asking questions about weather, time, traffic, etc.) Every time you say "Hey Google" or "OK Google", the script listens to your voice request which follows and then sends this request to Google Assistant API which returns back a text string (what you said) which can be used to control your TV or other applicances and/or a voice message from Assistant with information your requested. This device can be used in two modes:
 
 - **Assistant + Remote Control Mode**. If you say **"Hey Google, I need your help"** then you should hear a response "I am listening" and Google Asistant will turn into "Assistant mode" responding to your requests (don't forget to say "Hey Google" before each request) with voice messages. It will also continue working as your TV remote sending IR signals based on your voice commands.
 
@@ -219,17 +217,6 @@ Common errors:
 - Make sure that bright LED inside the arcade button mounted on top of the device is ON before you proceed with a voice command. This means the device is listening.
 - Point infrared LED toward your TV and make sure it is located not too far so the signal is strong enough. If remote commands are not working, make sure your IR LED sends a signal (with your cellphone camera.) 
 
-
-
-Paste `ir_remote_assistant_library.py` into the folder `/AIY-voice-kit-python/src`, open development terminal:
-
-
-
-and type type the command
-
-```
-(env) py@raspberrypi:~/AIY-voice-kit-python $ src/ir_remote_assistant_library.py
-```
 
 
 
