@@ -28,7 +28,12 @@ Replace old TV/Roku remotes with voice-controlled Google Voice AIY kit using Goo
 
 ### 2. Assemble hardware with IR components. Solder JST connector, IR LED, IR receiver, resistors and transistor to a circuit board
 
-![Schematics of IR hardware extension](https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/Voice_HAT_Hardware_Extensions.png)
+![Schematics of IR hardware extension](https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/RPI1_schem.jpg)
+
+The completed circuit board:
+
+![Schematics of IR hardware extension](https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/RPI1_schem.jpg)
+
 
 ### 3. Assemble Google Voice AIY kit
 
