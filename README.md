@@ -196,11 +196,11 @@ Copy `ir_remote_assistant_library.py` into the folder `/AIY-voice-kit-python/src
 
 Open the script `/AIY-voice-kit-python/src/ir_remote_assistant_library.py` with the text editor or IDE. Open your lirc config file `/etc/lirc/lircd.conf` with text editor. Make sure that (1) the values of `voice_command_to_key` discionary in the Python script (KEY_POWER, etc.) match the ones from config file and (2) the value of `remote_name` variable (I used '/home/pi/lircd.conf') in the Python script matches the configuration name (you can find it in line which starts with "name") of your lirc config file.   
 
-open development terminal:
+Open development terminal on Raspberry Pi of your device:
 
 <img src="https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/Start_dev_terminal.png" width="425"/>
 
-and type type the command
+Run the script
 
 ```
 (env) py@raspberrypi:~/AIY-voice-kit-python $ src/ir_remote_assistant_library.py
@@ -212,7 +212,7 @@ In addition to using Google Voice AIY kit as your voice-controlled TV remote, th
 
 - **Assistant + Remote Control Mode**. If you say **"Hey Google, I need your help"** then you should hear a response "I am listening" and Google Asistant will turn into "Assistant mode" responding to your requests (don't forget to say "Hey Google" before each request) with voice messages. It will also continue working as your TV remote sending IR signals based on your voice commands.
 
-- **Remote Control Only Mode**. If you only want use this device as a TV remote then say **"Hey Google, get some rest"**. You will hear a confirmation "Let me know when you need me" and Google Assistant will not be engaged into conversation (i.e. ignore your questions about the weather, etc.) and only serve as a remote control. You can activate "Assistant + Remote Control Mode" at any moment by saying "Hey Google, I need your help"  
+- **Remote Control Only Mode**. If you only want use this device as a TV remote then say **"Hey Google, get some rest"**. You will hear a confirmation "Let me know when you need my help" and Google Assistant will not be engaged into conversation (i.e. ignore your questions about the weather, etc.) and only serve as a remote control. You can activate "Assistant + Remote Control Mode" at any moment by saying "Hey Google, I need your help"  
 
 Common errors:
 
