@@ -35,12 +35,15 @@ Schematics of Voice Hat connections             | Soldered wires to Voice Hat
 
 If you use a different transistor, check its pinout in the datasheet. For example, pinouts of P2N2222 and PN2222 are different.
 
-The completed circuit:
+The assembled IR block:
 
 Front                                           | Back
 :----------------------------------------------:|:------------------------------------------------------------:
 <img src="https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/Front.JPG" width="425"/>    |  <img src="https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/Rear.JPG" width="425"/>
 
+Make an opening on the side of the carton box for IR LED and receiver and attached the circuit board to the wall with 2-sided sticky foam.
+
+<img src="https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/Front.JPG" width="425"/>    |  <img src="https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/Rear.JPG" width="425"/>
 
 
 
