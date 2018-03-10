@@ -43,7 +43,7 @@ Front                                           | Back
 
 Make an opening on the side of the carton box for IR LED and receiver and attached the circuit board to the wall with 2-sided sticky foam.
 
-<img src="https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/Front.JPG" width="425"/>    |  <img src="https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/Rear.JPG" width="425"/>
+<img src="https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/Hardware_with_sticky_tape.JPG" width="425"/>    |  <img src="https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/Rear.JPG" width="425"/>
 
 
 
