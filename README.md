@@ -14,7 +14,7 @@ Replace old TV/Roku remotes with voice-controlled Google Voice AIY kit using Goo
 - 2-sided sticky foam tape
 
 Components:
-![Hardware components](tv_remote_google_voice_aiy/images/components.JPG)
+![Hardware components](https://github.com/dvillevald/tv_remote_google_voice_aiy/images/components.JPG)
 
 
 ## Software
