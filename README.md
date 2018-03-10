@@ -140,7 +140,7 @@ pulse 85
 space 2903
 ```
 
-### 6. Creating LIRC remote configuration file. 
+### 6. Create LIRC remote configuration file. 
 
 You’re going to need to either find an existing LIRC config file for your remote control or use your IR receiver to generate a new LIRC config file (find existing remote profiles [here](http://lirc.sourceforge.net/remotes/)). In my case, I created a new LIRC config file. To do this, read the documentation on the [irrecord](http://www.lirc.org/html/irrecord.html) application that comes with LIRC. When using `irrecord` it will ask you to name the buttons you’re programming as you program them. It helps to run `irrecord --list-namespace` before you begin to see the valid names. You can use one, two or more remote control (I used two - one for TV and another for Roku player) with `irrecord`.
 
@@ -165,7 +165,7 @@ $ sudo /etc/init.d/lirc start
 
 After this step your config file `/etc/lirc/lircd.conf` should look similar to [mine](https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/code/lircd.conf). You can see that my TV remote sends a single IR command (e.g. KEY_POWER 0x42BD807F) while Roku sends two (e.g. KEY_HOME 0x5743C03F 0x5743C13E.) Note that the name of my remote configuration (referenced in line of config file starting with "name") is "/home/pi/lircd.conf" while Austin uses name "Roku" in his tutorial. 
 
-### 7. Testing IR LED. 
+### 7. Test IR LED. 
 
 Once you’ve completed a remote configuration file and saved/added it to */etc/lirc/lircd.conf* you are ready to test IR LED. We’ll be using the [irsend](http://www.lirc.org/html/irsend.html) application that comes with LIRC to facilitate sending commands from command line. You’ll want to check out the documentation to learn more about the options `irsend` has.
 
@@ -180,7 +180,8 @@ $ irsend SEND_ONCE /home/pi/lircd.conf KEY_POWER
 ```
 You can test if it is working by pointing the IR LED at your TV and testing whether you could turn it on (I am assuming you programmed KEY_POWER to turn on your TV). Another way to test is to use your cellphone camera to see if LED blinks when you send commands with `irsend`. I could not see LED blinking on my iPhone camera but it worked fine with Android phone (Samsung Galaxy.)
 
-### 8. Using Google Assistant Library   
+### 8. Google Assistant SDK Library
+
 
 
 
