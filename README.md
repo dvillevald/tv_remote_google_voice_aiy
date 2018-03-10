@@ -188,11 +188,11 @@ You can test if it is working by pointing the IR LED at your TV and testing whet
 
 Use your Google account to sign in to the Google Cloud Platform (GCP). If you don't have one you will have to create one. This project uses Google Assistant API which is free to personal use at the moment of writing and let you make 500 calls per day. Google explains how to setup your account, create credentials and sign in to the GCP [here](https://aiyprojects.withgoogle.com/voice#users-guide). Make sure you enable **Google Assistant API.**
 
-### 9. Testing device
+### 9. Test the device
 
-The Python script [ir_remote_assistant_library.py](https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/code/ir_remote_assistant_library.py) used for this project is a modified version of `/AIY-voice-kit-python/src/assistant_library_demo.py`. **Warning: the folder names and folder structure on your Raspberry Pi may be different from the ones on the [Google's Voice kit website](https://aiyprojects.withgoogle.com/voice#makers-guide) so may have to make changes in your folder names and paths.** 
+The Python script [ir_remote_assistant_library.py](https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/code/ir_remote_assistant_library.py) used for this project is a modified version of `/AIY-voice-kit-python/src/assistant_library_demo.py`. **Warning: the folder names and folder structure on your Raspberry Pi may be different from the ones on the [Google's Voice kit website](https://aiyprojects.withgoogle.com/voice#makers-guide) so make sure to check your folder names and paths.** 
 
-Paste `ir_remote_assistant_library.py` into the folder `/AIY-voice-kit-python/src`, open development terminal:
+Copy `ir_remote_assistant_library.py` into the folder `/AIY-voice-kit-python/src`, open development terminal:
 
 <img src="https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/Assembled_box.JPG" width="425" height="425"/>
 
