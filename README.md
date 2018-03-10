@@ -31,7 +31,7 @@ Schematics of Voice Hat connections             | Soldered wires to Voice Hat
 
 ### 2. Assemble hardware with IR components. Solder JST connector, IR LED, IR receiver, resistors and transistor to a circuit board
 
-<img src="https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/Schematics.jpg" width="425"/> 
+<img src="https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/IR_block_schematics.png" width="425"/> 
 
 If you use a different transistor, check its pinout in the datasheet. For example, pinouts of P2N2222 and PN2222 are different.
 
