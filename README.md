@@ -28,12 +28,16 @@ Schematics of Voice Hat connections             | Soldered wires to Voice Hat
 
 <img src="https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/Schematics.jpg" width="425"/> 
 
+If you use a different transistor, check its pinout in the datasheet. For example, pinouts of P2N2222 and PN2222 are different.
+
+The completed circuit:
+
 Front                                           | Back
 :----------------------------------------------:|:------------------------------------------------------------:
 <img src="https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/Front.JPG" width="425"/>    |  <img src="https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/Rear.JPG" width="425"/>
 
 
-The completed circuit board:
+
 
 ![Schematics of IR hardware extension](https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/RPI1_schem.jpg)
 
