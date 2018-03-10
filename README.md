@@ -7,7 +7,7 @@ Replace old TV/Roku remotes with voice-controlled Google Voice AIY kit using Goo
 - Raspberry PI 3 Model B
 - Power supply for Raspberry PI
 - Infrared LED and receiver (https://www.amazon.com/gp/product/B00EFOTJZE/ref=pe_62860_272369200_em_1p_0_ti)
-- Resistors 68 Ohm and 1kOhm ??Omega??
+- Resistors 68 Ohm and 1 kOhm
 - Transistor P2N2222
 - Circuit board (2cm x 8cm)
 - 4-pin JST-XH Connector Pair
