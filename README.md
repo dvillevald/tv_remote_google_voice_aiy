@@ -1,6 +1,6 @@
 ## Motivation
 
-To replace old TV/Roku remotes with voice-controlled Google Voice AIY kit using Google Assistant Library
+Replace old TV/Roku remotes with voice-controlled Google Voice AIY kit using Google Assistant Library
 
 ## Hardware
 - Google Voice AIY kit (http://www.microcenter.com/product/483414/AIY_Voice_Kit)
