@@ -20,6 +20,10 @@ Replace old TV/Roku remotes with voice-controlled Google Voice AIY kit using Goo
 
 <img src="https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/Hardware_components.jpg" width="425"/>
 
+## Warning
+
+I strongly recommend to test this project on a breadboard first before starting soldering.  
+
 ## Project steps
 
 ### 1. Solder wires of 4-pin JST-XH Connector to GPIO pins 24, 26, GND and 5V of Voice HAT (marked by red rectangulars below)
@@ -180,7 +184,51 @@ $ irsend SEND_ONCE /home/pi/lircd.conf KEY_POWER
 ```
 You can test if it is working by pointing the IR LED at your TV and testing whether you could turn it on (I am assuming you programmed KEY_POWER to turn on your TV). Another way to test is to use your cellphone camera to see if LED blinks when you send commands with `irsend`. I could not see LED blinking on my iPhone camera but it worked fine with Android phone (Samsung Galaxy.)
 
-### 8. Google Assistant SDK Library
+### 8. Sign in to the Google Cloud Platform
+
+Use your Google account to sign in to the Google Cloud Platform (GCP). If you don't have one you will have to create one. This project uses Google Assistant API which is free to personal use at the moment of writing and let you make 500 calls per day. Google explains how to setup your account, create credentials and sign in to the GCP [here](https://aiyprojects.withgoogle.com/voice#users-guide). Make sure you enable **Google Assistant API.**
+
+### 9. Testing device
+
+The Python script [ir_remote_assistant_library.py](https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/code/ir_remote_assistant_library.py) used for this project is a modified version of `/AIY-voice-kit-python/src/assistant_library_demo.py`. **Warning: the folder names and folder structure on your Raspberry Pi may be different from the ones on the [Google's Voice kit website](https://aiyprojects.withgoogle.com/voice#makers-guide) so may have to make changes in your folder names and paths.** 
+
+Paste `ir_remote_assistant_library.py` into the folder `/AIY-voice-kit-python/src`, open development terminal:
+
+<img src="https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/Assembled_box.JPG" width="425" height="425"/>
+
+and type type the command
+
+```
+(env) py@raspberrypi:~/AIY-voice-kit-python $ src/ir_remote_assistant_library.py
+```
+
+
+
+In addition to using Google Voice AIY kit as your voice-controlled TV remote, the script also allows you to fully use Google Assistant API (asking questions about weather, time, traffic, etc.)
+
+Every time you say "Hey Google" or "OK Google", the script sends a request to Google Assistant API which returns back a text string which can be used to control your TV or voice message with information your requested. In addition to using Google Voice AIY kit as your voice-controlled TV remote, the script also allows you to fully use Google Assistant API (asking questions about weather, time, traffic, etc.) The code uses the following logic:
+
+- **Assistant + Remote Mode**. If you say **"Hey Google, I need your help"** then you should hear a response "I am listening" and Google Asistant will turn into "Assistant mode" responding to your requests (don't forget to say "Hey Google" before each request) with voice messages. It will also continue working as your TV remote sending IR signals based on your voice commands.
+
+- **Remote Ony Mode**. If you only want use this device as a TV remote then say **"Hey Google, get some rest"**. You will hear a confirmation "Let me know when you need me" and Google Assistant will not be engaged into conversation (i.e. ignore your questions about the weather, etc.) and only serve as a remote control. You can activate "Assistant + Remote mode" at any moment by saying "Hey Google, I need your help"  
+
+Common errors:
+
+- Make sure that bright LED inside the arcade button mounted on top of the device is ON before you make a voice command. This means the device is listening.
+- Point infrared LED toward your TV and make sure it is located not too far so the signal is strong enough.
+
+
+
+Paste `ir_remote_assistant_library.py` into the folder `/AIY-voice-kit-python/src`, open development terminal:
+
+
+
+and type type the command
+
+```
+(env) py@raspberrypi:~/AIY-voice-kit-python $ src/ir_remote_assistant_library.py
+```
+
 
 
 
