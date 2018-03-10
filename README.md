@@ -63,9 +63,9 @@ Make an opening in the wall of the carton box for IR LED and receiver and attach
 There are several very good tutorial on how to install LIRC on Raspberry PI. For example, the one from Austin Stanton (
 https://www.hackster.io/austin-stanton/creating-a-raspberry-pi-universal-remote-with-lirc-2fd581)
 
-
-
-
+```
+sudo apt-get install lirc
+```
 
 
 
