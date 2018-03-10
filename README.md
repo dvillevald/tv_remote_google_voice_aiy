@@ -218,6 +218,8 @@ Common errors:
 - Point infrared LED toward your TV and make sure it is located not too far so the signal is strong enough. If remote commands are not working, make sure your IR LED sends a signal (with your cellphone camera.)
 - Make sure the room is not too noisy and move closer to the device if it is.
 
+### 10. Automate the process
+In addition to using Google Voice AIY kit as your voice-controlled TV remote, the script also allows you to fully utilize Google Assistant API (asking questions about weather, time, traffic, etc.) Every time you say "Hey Google" or "OK Google", the script listens to your voice request which follows and then sends this request to Google Assistant API which returns back a text string (your request) which can be used to control your TV or other applicances and a voice message from Assistant with information your requested. This device can be used in two modes:
 
 
 
