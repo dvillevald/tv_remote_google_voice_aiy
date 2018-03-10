@@ -61,18 +61,18 @@ Make an opening in the wall of the carton box for IR LED and receiver and attach
 ### 5. Download and install LIRC software
 
 There are several very good tutorial on how to install LIRC on Raspberry PI. For example, you can follow the one from Austin Stanton (
-https://www.hackster.io/austin-stanton/creating-a-raspberry-pi-universal-remote-with-lirc-2fd581) Note that we use **output pin 26** and **input pin 24 here.** 
+https://www.hackster.io/austin-stanton/creating-a-raspberry-pi-universal-remote-with-lirc-2fd581) **Make sure you reference the right pins - unlike Austin's tutorial we use output pin 26 and input pin 24 here.** 
 
 - Install LIRC
 
 ```
-sudo apt-get install lirc
+$ sudo apt-get install lirc
 ```
 
 - Add to your /etc/modules file by entering the command below
 
 ```
-sudo cat >> /etc/modules <<EOF
+$ sudo cat >> /etc/modules <<EOF
 lirc_dev
 lirc_rpi gpio_in_pin=24 gpio_out_pin=26
 EOF
@@ -81,7 +81,7 @@ EOF
 - Change your /etc/lirc/hardware.conf file by entering the command below
 
 ```
-sudo cat > /etc/lirc/hardware.conf <<EOF 
+$ sudo cat > /etc/lirc/hardware.conf <<EOF 
 ########################################################
 # /etc/lirc/hardware.conf
 #
@@ -104,6 +104,47 @@ LIRCMD_CONF=""
 ######################################################## 
 EOF
 ```
+- Edit your /boot/config.txt by entering the command below
 
+```
+$ cat >> /boot/config.txt <<EOF
+dtoverlay=lirc-rpi,gpio_in_pin=24,gpio_out_pin=26
+EOF 
+```
+- Now restart lircd so it picks up these changes:
+
+```
+$ sudo /etc/init.d/lirc stop
+$ sudo /etc/init.d/lirc start
+```
+
+- Testing the IR receiver. Run these two commands to stop lircd and start outputting raw data from the IR receiver:
+
+```
+$ sudo /etc/init.d/lirc stop
+$ mode2 -d /dev/lirc0
+```
+
+- Point a remote control at your IR receiver and press some buttons. You should see something like this:
+
+```
+space 16300
+pulse 95
+space 28794
+pulse 80
+space 19395
+pulse 83
+space 402351
+pulse 135
+space 7085
+pulse 85
+space 2903
+```
+
+- Testing the IR LED. You’re going to need to either find an existing LIRC config file for your remote control or use your IR receiver to generate a new LIRC config file (find existing remote profiles (http://lirc.sourceforge.net/remotes/)). In my case, I created a new LIRC config file. To do this, read the documentation on the **irrecord** application that comes with LIRC.
+
+```
+
+```
 
 
