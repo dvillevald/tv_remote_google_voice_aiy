@@ -1,4 +1,3 @@
-# WORK IN PROGRESS
 ## Motivation
 
 Replace old TV/Roku remotes with voice-controlled Google Voice AIY kit using Google Assistant Library
@@ -228,13 +227,13 @@ You screen should show a bar chart with your daily usage:
 <img src="https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/Quotas.png"/>
   
 ### 10. Automate the process
-Once you the script is working, automate the process. 
+Once you the script is working, it is time to automate the process. 
 
-#### Shutdown
+### Shutdown
 
-The shutdown is already implemented in the code. You have to say "Hey Google" and then **"Google shut down."** The device will respond saying "Shutting down" and shut down. Note that there are two "Googles" here - one from hotword ("Hey Google") and another - from voice command ("Google shut down".) This is done on purpose to avoid device's shut down by accident. 
+The shutdown is already implemented in the code. You have to say "Hey Google" and then **"Google shut down."** The device will respond saying "Shutting down" and shut down. Note that there are two "Googles" here - one from hotword ("Hey Google") and another - from the voice command ("Google shut down".) This is done on purpose to avoid device's shut down by accident. 
 
-#### Launching app on startup
+### Launching app on startup
 
 Google [explains](https://aiyprojects.withgoogle.com/voice#makers-guide) in section **RUN YOUR APP AUTOMATICALLY** how to setup and activate the system service which will start your application when Raspberry PI starts:
 
@@ -281,7 +280,10 @@ To disable your service, enter:
 $ sudo systemctl disable ir_remote_assistant_library.service
 ```
 
-#### I hope you found this tutorial useful. Thank you!
+#### Final thoughts
+- On some occasions the remote voice command is executed (i.e. sends the correct IR signal to the TV) but triggers a message `ALSA lib pcm.c:7843:(snd_pcm_recover) overrun occurred`. I was unable to fully understand why this happens and fix this issue.
+- Sometimes I was getting a voice response **"Hmm, something went wrong. Try again in a few seconds"** When this happens the service should restart and the same request sends seconds later was usually processed with no issues.  
+- It is a bit annoying to say a hotword "Hey Google" mupltiple times when you are trying to navigate to the movie you would like to watch through the grid on Netflix or Amazon Prime. Clicking arcade button mounted on top of the device instead is an option but it denies the purpose of the remote. Making Google constantly listening to your conversation until you say something like "Google turn on TV" is possible with a Google Cloud API but would be prohibitively expensive. A better alternative would be to use a different activation trigger like motion detector or via computer vision application (detection of raised arm, for example.)
+- When you navigating through the grid of movies on Netflix or Amazon Prime, one way to increase efficiency would be to combine several remote commands into one so, for example, instead of saying three times "Hey Google, go left" you would say once "Hey Google, go left three steps." It should be easy to implement and this would be a smarter way to use the daily quota.
 
-
-
+I hope you enjoyed this tutorial. Let me know if you have comments or questions or if you made a similar project. Thank you!
