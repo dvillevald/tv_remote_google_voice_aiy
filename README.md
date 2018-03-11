@@ -191,6 +191,8 @@ Use your Google account to sign in to the Google Cloud Platform (GCP). If you do
 
 The Python script [ir_remote_assistant_library.py](https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/code/ir_remote_assistant_library.py) used for this project is a modified version of `/AIY-voice-kit-python/src/assistant_library_demo.py`. **Warning: the folder names and folder structure on your Raspberry Pi may be different from the ones on the [Google's Voice kit website](https://aiyprojects.withgoogle.com/voice#makers-guide) so make sure to check your folder names and paths.** 
 
+I strongly recommend to check Google Assistant Library [documentation](https://developers.google.com/assistant/sdk/reference/library/python/) for details on lifecycle handling for the Google Assistant and explanation of stream of Events relaying the various Assistant states. 
+
 Copy `ir_remote_assistant_library.py` into the folder `/AIY-voice-kit-python/src`.
 
 Open the script `/AIY-voice-kit-python/src/ir_remote_assistant_library.py` with the text editor or IDE. Open your lirc config file `/etc/lirc/lircd.conf` with text editor. Make sure that (1) the values of `voice_command_to_key` discionary in the Python script (KEY_POWER, etc.) match the ones from config file and (2) the value of `remote_name` variable (I used '/home/pi/lircd.conf') in the Python script matches the configuration name (you can find it in line which starts with "name") of your lirc config file.   
@@ -292,6 +294,6 @@ alt="Google Voice AIY with added TV remote functionality in action" width="480" 
 
 - It is a bit annoying to say a hotword "Hey Google" mupltiple times when you are trying to navigate to the movie you would like to watch through the grid on Netflix or Amazon Prime. Clicking arcade button mounted on top of the device instead is an option but it denies the purpose of the remote. Making Google constantly listening to your conversation until you say something like "Google turn on TV" is possible with a Google Cloud API but would be prohibitively expensive. A better alternative would be to use a different activation trigger like motion detector or via computer vision application (detection of raised arm, for example.)
 
-- When you navigating through the grid of movies on Netflix or Amazon Prime, one way to increase efficiency would be to combine several remote commands into one so, for example, instead of saying three times "Hey Google, go left" you would say once "Hey Google, go left three steps." It should be easy to implement and this would be a smarter way to use the daily quota.
+- When you are navigating through the grid of movies on Netflix or Amazon Prime, one way to increase efficiency would be to combine several remote commands into one so, for example, instead of saying three times "Hey Google, go left" you would say once "Hey Google, go left three steps." It should be easy to implement and this would be a smarter way to use the daily quota.
 
 I hope you enjoyed this tutorial. Let me know if you have comments or questions or if you made a similar project. Thank you!
