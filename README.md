@@ -50,7 +50,7 @@ Front                                           | Back
 
 ### 3. Assemble Google Voice AIY kit
 
-Follow instructions at (https://aiyprojects.withgoogle.com/voice) and assemble Google Voice AIY kit. 
+Follow instructions at the official [Google Voice AIY kit website](https://aiyprojects.withgoogle.com/voice) and assemble Google Voice AIY kit. 
 
 ### 4. Connect IR block to Google Voice AIY kit
 
@@ -63,7 +63,7 @@ Make an opening in the wall of the carton box for IR LED and receiver and attach
 
 ### 5. Download, install and configure LIRC software
 
-There are several very good tutorials on how to install LIRC on Raspberry PI. Here I follow the one created by [Austin Stanton](https://www.hackster.io/austin-stanton/creating-a-raspberry-pi-universal-remote-with-lirc-2fd581). **If you are using Austin's tutorial, make sure you reference the right pins - unlike Austin's tutorial I use output pin 26 and input pin 24 here. Also, unlike Astin who used the name "Roku" in lircd.conf file for his remote configuration, I am using the name “/home/pi/lircd.conf”.** 
+There are several very good tutorials on how to install LIRC on Raspberry PI. Here I follow the one created by [Austin Stanton](https://www.hackster.io/austin-stanton/creating-a-raspberry-pi-universal-remote-with-lirc-2fd581). **If you are using Austin's tutorial, make sure you reference the right pins - unlike Austin's tutorial I use output pin 26 and input pin 24 here. Also, unlike Austin who used the name "Roku" in lircd.conf file for his remote configuration, I am using the name “/home/pi/lircd.conf”.** 
 
 Install LIRC on Raspberry PI of your device
 
