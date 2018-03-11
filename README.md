@@ -270,7 +270,7 @@ To monitor your service status (very useful for debugging), enter:
 ```
 $ sudo service ir_remote_assistant_library status -l
 ```
-That is it.
+**That is it!**
 
 Finally, if you want to manually stop your service, enter
 ```
@@ -278,7 +278,7 @@ $ sudo service ir_remote_assistant_library stop
 ```
 To disable your service, enter:
 ```
-sudo systemctl disable ir_remote_assistant_library.service
+$ sudo systemctl disable ir_remote_assistant_library.service
 ```
 
 #### I hope you found this tutorial useful. Thank you!
