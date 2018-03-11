@@ -225,7 +225,7 @@ Hints:
   - Clicking on **Quotas** on the page that will open.
 You screen should show a bar chart with your daily usage:
   
-<img src="https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/Start_dev_terminal.png" width="425"/>
+<img src="https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/Quotas.png" width="425"/>
   
 ### 10. Automate the process
 Once you the script is working, automate the process. 
