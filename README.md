@@ -212,16 +212,76 @@ In addition to using Google Voice AIY kit as your voice-controlled TV remote, th
 
 - **Remote Control Only Mode**. If you only want use this device as a TV remote then say **"Hey Google, get some rest"**. You will hear a confirmation "Let me know when you need my help" and Google Assistant will stop engaging into conversation (i.e. ignore your questions about weather, etc.) and only serve as a remote control. You can always activate "Assistant + Remote Control Mode" again by saying "Hey Google, I need your help".  
 
-Common errors:
+Hints:
 
 - Make sure that bright LED inside the arcade button mounted on top of the device is ON before you proceed with a voice command. This means the device is listening.
-- Point infrared LED toward your TV and make sure it is located not too far so the signal is strong enough. If remote commands are not working, make sure your IR LED sends a signal (with your cellphone camera.)
-- Make sure the room is not too noisy and move closer to the device if it is.
-
+- Point infrared LED toward your TV and make sure it is not too far so the signal is strong enough. If remote commands are not working, check if your IR LED sends a signal (with your cellphone camera.)
+- Make sure the room is not too noisy so the Assistant can understand your voice commands. Move closer to the device if it is.
+- Remember your voice commands. Your device will understanf "Turn on TV", for example, but will do nothing if you say "Turn TV on".
+- Control your quota - you can only make 500 requests per day. You can check your usage by navigatinng to 
+  - Google Cloud platform at ![](https://console.cloud.google.com),
+  - Selecting **APIs & Services -> Dashboard** from the dropdown menu in the upper left corner,
+  - Clicking on **Google Assistant API** in the API list, and
+  - Clicking on **Quotas** on the page that will open.
+You screen should show a bar chart with your daily usage:
+  
+<img src="https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/Start_dev_terminal.png" width="425"/>
+  
 ### 10. Automate the process
-In addition to using Google Voice AIY kit as your voice-controlled TV remote, the script also allows you to fully utilize Google Assistant API (asking questions about weather, time, traffic, etc.) Every time you say "Hey Google" or "OK Google", the script listens to your voice request which follows and then sends this request to Google Assistant API which returns back a text string (your request) which can be used to control your TV or other applicances and a voice message from Assistant with information your requested. This device can be used in two modes:
+Once you the script is working, automate the process. 
 
+#### Shutdown
 
+The shutdown is already implemented in the code. You have to say "Hey Google" and then **"Google shut down."** The device will respond saying "Shutting down" and shut down. Note that there are two "Googles" here - one from hotword ("Hey Google") and another - from voice command ("Google shut down".) This is done on purpose to avoid device's shut down by accident. 
+
+#### Launching app on startup
+
+Google [explains](https://aiyprojects.withgoogle.com/voice#makers-guide) in section **RUN YOUR APP AUTOMATICALLY** how to setup and activate the system service which will start your application when Raspberry PI starts:
+
+- Open text editor, type the following. **Make sure that the folder names match the ones on your Raspberry Pi!**:
+```
+Description=My awesome assistant app
+
+[Service]
+ExecStart=/bin/bash -c '/home/pi/AIY-voice-kit-python/env/bin/python3 -u src/ir_remote_assistant_library.py'
+WorkingDirectory=/home/pi/AIY-voice-kit-python
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
+```
+- Save the result as `ir_remote_assistant_library.service`
+- Move the created file into system folder:
+```
+$ sudo mv ir_remote_assistant_library.service /lib/systemd/system/
+```
+- Now your service has been configured! To enable your service, enter the following command (note that we are referring to the service, not the name of Python script it runs):
+```
+$ sudo systemctl enable ir_remote_assistant_library.service
+```
+
+To manually start your service, enter:
+```
+$ sudo service ir_remote_assistant_library start
+```
+
+To monitor your service status (very useful for debugging), enter:
+```
+$ sudo service ir_remote_assistant_library status -l
+```
+That is it.
+
+Finally, if you want to manually stop your service, enter
+```
+$ sudo service ir_remote_assistant_library stop
+```
+To disable your service, enter:
+```
+sudo systemctl disable ir_remote_assistant_library.service
+```
+
+#### I hope you found this tutorial useful. Thank you!
 
 
 
