@@ -288,7 +288,7 @@ $ sudo systemctl disable ir_remote_assistant_library.service
 alt="Google Voice AIY with added TV remote functionality in action" width="480" height="360" border="10" /></a>
 
 ### Final thoughts
-- On some occasions the remote voice command is executed (i.e. sends the correct IR signal to the TV) but triggers a message `ALSA lib pcm.c:7843:(snd_pcm_recover) overrun occurred`. Despite my efforts I was unable to fully understand why this happens and fix this issue.
+- On some occasions the remote voice command is executed properly (i.e. sends the correct IR signal to the TV) but triggers a message `ALSA lib pcm.c:7843:(snd_pcm_recover) overrun occurred`. Despite my efforts I was unable to fully understand why this happens and fix this issue.
 
 - Sometimes, usually after a long period with no activity, I was getting a voice response **"Hmm, something went wrong. Try again in a few seconds"** When this happens the service should restart and the same request sends seconds later was usually processed with no issues.  
 
