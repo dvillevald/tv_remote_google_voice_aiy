@@ -13,18 +13,21 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Run a recognizer using the Google Assistant Library.
+"""
+Adds TV remtoe control functionality to Google Voice AIY kit using the Google Assistant Library.
 
 The Google Assistant Library has direct access to the audio API, so this Python
-code doesn't need to record audio. Hot word detection "OK, Google" is supported.
+code doesn't need to record audio. Hot word detection "OK, Google" or "Hey Google" are supported.
 
 The Google Assistant Library can be installed with:
     env/bin/pip install google-assistant-library==0.0.2
 
 It is available for Raspberry Pi 2/3 only; Pi Zero is not supported.
+"""
 
 """
-"""
+My map of LIRC battons to IR signals (yours will be different):
+
 KEY_POWER                0x42BD807F
 KEY_MUTE                 0x42BD40BF
 KEY_VOLUMEUP             0x42BD708F
@@ -63,7 +66,7 @@ from google.assistant.library.event import EventType
 # Name of remote (name) in lircd.conf
 remote_name = '/home/pi/lircd.conf'
 
-# Create dictionary voice_command_to_key linking (short) voice commands with remote control keys
+# Dictionary voice_command_to_key linking voice commands with LIRC remote control button names
 voice_command_to_key = {}
 voice_command_to_key['turn off TV'] = 'KEY_POWER'
 voice_command_to_key['turn on TV'] = 'KEY_POWER'
@@ -90,9 +93,6 @@ logging.basicConfig(
 )
 
 keep_conversation = False
-
-#GPIO.setmode(GPIO.BCM)
-#GPIO.setup(37, GPIO.OUT)
 
 def process_event(event,_assistant):
     global keep_conversation
