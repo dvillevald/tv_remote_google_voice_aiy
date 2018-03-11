@@ -14,19 +14,13 @@
 # limitations under the License.
 
 """
-Adds TV remtoe control functionality to Google Voice AIY kit using the Google Assistant Library.
-
-The Google Assistant Library has direct access to the audio API, so this Python
-code doesn't need to record audio. Hot word detection "OK, Google" or "Hey Google" are supported.
-
-The Google Assistant Library can be installed with:
-    env/bin/pip install google-assistant-library==0.0.2
+Adds TV remote control functionality to Google Voice AIY kit using the Google Assistant Library.
 
 It is available for Raspberry Pi 2/3 only; Pi Zero is not supported.
 """
 
 """
-My map of LIRC battons to IR signals (yours will be different):
+My map of LIRC buttons to IR signals (yours will be different):
 
 KEY_POWER                0x42BD807F
 KEY_MUTE                 0x42BD40BF
