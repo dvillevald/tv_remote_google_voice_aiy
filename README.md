@@ -218,7 +218,7 @@ Hints:
 - Make sure the room is not too noisy so the Assistant can understand your voice commands. Move closer to the device if it is.
 - Remember your voice commands. Your device will understanf "Turn on TV", for example, but will do nothing if you say "Turn TV on".
 - Control your quota - you can only make 500 requests per day. You can check your usage by navigatinng to 
-  - Google Cloud platform at ![](https://console.cloud.google.com),
+  - [Google Cloud platform](https://console.cloud.google.com),
   - Selecting **APIs & Services -> Dashboard** from the dropdown menu in the upper left corner,
   - Clicking on **Google Assistant API** in the API list, and
   - Clicking on **Quotas** on the page that will open.
