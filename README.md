@@ -282,8 +282,8 @@ $ sudo systemctl disable ir_remote_assistant_library.service
 
 ### Device in action
 
-<a href="https://youtu.be/X5MmewNA6f4" target="_blank"><img src="http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg" 
-alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+<a href="https://youtu.be/X5MmewNA6f4" target="_blank"><img src="https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/Youtube.png" 
+alt="Google Voice AIY with added TV remote functionality in action" width="240" height="180" border="10" /></a>
 
 ### Final thoughts
 - On some occasions the remote voice command is executed (i.e. sends the correct IR signal to the TV) but triggers a message `ALSA lib pcm.c:7843:(snd_pcm_recover) overrun occurred`. Despite my efforts I was unable to fully understand why this happens and fix this issue.
