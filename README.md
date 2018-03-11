@@ -280,9 +280,13 @@ To disable your service, enter:
 $ sudo systemctl disable ir_remote_assistant_library.service
 ```
 
+### Device in action
+
+
+
 ### Final thoughts
 - On some occasions the remote voice command is executed (i.e. sends the correct IR signal to the TV) but triggers a message `ALSA lib pcm.c:7843:(snd_pcm_recover) overrun occurred`. I was unable to fully understand why this happens and fix this issue.
-- Sometimes I was getting a voice response **"Hmm, something went wrong. Try again in a few seconds"** When this happens the service should restart and the same request sends seconds later was usually processed with no issues.  
+- Sometimes, usually after a long period with no activity, I was getting a voice response **"Hmm, something went wrong. Try again in a few seconds"** When this happens the service should restart and the same request sends seconds later was usually processed with no issues.  
 - It is a bit annoying to say a hotword "Hey Google" mupltiple times when you are trying to navigate to the movie you would like to watch through the grid on Netflix or Amazon Prime. Clicking arcade button mounted on top of the device instead is an option but it denies the purpose of the remote. Making Google constantly listening to your conversation until you say something like "Google turn on TV" is possible with a Google Cloud API but would be prohibitively expensive. A better alternative would be to use a different activation trigger like motion detector or via computer vision application (detection of raised arm, for example.)
 - When you navigating through the grid of movies on Netflix or Amazon Prime, one way to increase efficiency would be to combine several remote commands into one so, for example, instead of saying three times "Hey Google, go left" you would say once "Hey Google, go left three steps." It should be easy to implement and this would be a smarter way to use the daily quota.
 
