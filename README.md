@@ -284,7 +284,7 @@ $ sudo systemctl disable ir_remote_assistant_library.service
 
 ### Device in action
 
-<a href="https://youtu.be/X5MmewNA6f4" target="_blank"><img src="https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/Youtube.png" 
+<a href="https://youtu.be/WeoYN3fY2kc" target="_blank"><img src="https://github.com/dvillevald/tv_remote_google_voice_aiy/blob/master/images/Youtube.png" 
 alt="Google Voice AIY with added TV remote functionality in action" width="480" height="360" border="10" /></a>
 
 ### Final thoughts
